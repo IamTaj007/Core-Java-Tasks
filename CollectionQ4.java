@@ -15,7 +15,7 @@ package CoreJavaTask;
 
 import java.util.*;
 
-public class Exceptionq6 {
+public class CollectionQ4 {
 
 	ArrayList<Integer> al = new ArrayList<>();
 	Scanner sc = new Scanner(System.in);
@@ -96,7 +96,7 @@ public class Exceptionq6 {
 	}
 	public static void main(String arg[]) {
 
-		Exceptionq6 e = new Exceptionq6();
+		CollectionQ4 e = new CollectionQ4();
 //		e.arrayList();
 //		e.Iteration();
 //		e.sortArrayList();

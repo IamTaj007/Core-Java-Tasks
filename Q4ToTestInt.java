@@ -18,7 +18,7 @@ class arithmetic implements test{
 	}
 
 	}
-class ToTestInt{
+class Q4ToTestInt{
 	public static void main(String arg[]) {
 		Scanner sc = new Scanner(System.in); 
 		System.out.println("Enter a number");
