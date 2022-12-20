@@ -20,7 +20,7 @@ public class CollectionQ4 {
 	ArrayList<Integer> al = new ArrayList<>();
 	Scanner sc = new Scanner(System.in);
 	ArrayList<String> alstring = new ArrayList<>();
-
+	
 	void arrayList() {
 
 		for (int i = 0; i < 10; i++) {
@@ -74,6 +74,7 @@ public class CollectionQ4 {
 		alstring.add("Sartaz");
 		alstring.add("Bishal");
 		alstring.add("Akshat");
+		alstring.add("Kofu");
 		Collections.sort(alstring);
 		System.out.println(alstring);
 	}
@@ -91,19 +92,55 @@ public class CollectionQ4 {
 
 		void search() {
 		System.out.println("Enter the element you want to search");
-		String search = null;
+		String search = sc.nextLine();
+		if(alstring.contains(search)==true) {
+			System.out.println("The element is present in the record");
+		}
+		else {
+			System.out.println("The element is not present in the record");
+			
+		}
 		
 	}
+		void remove() {
+			System.out.println("Enter the element you want to remove");
+			String search = sc.nextLine();
+			alstring.remove(search);
+			System.out.println("The updated element is present in the record is "+alstring);
+			
+		}
+		
+		void removeDuplicate() {
+			
+			String n= null;
+			int flag=0;
+					ArrayList <String> newList = new ArrayList<String>();
+					for(String str :alstring) {
+						if(newList.contains(str)==false) {
+							newList.add(str);
+						}
+					}
+					alstring.clear();
+					alstring.addAll(newList);
+					//System.out.println("Value of duplicate element"+alstring);
+					//System.out.println("Value after removal of duplicate element"+newList);
+					System.out.println("Value after removal of duplicate element "+alstring);
+		}
+		
+		
 	public static void main(String arg[]) {
 
 		CollectionQ4 e = new CollectionQ4();
-//		e.arrayList();
-//		e.Iteration();
-//		e.sortArrayList();
-//		e.insertElement();
-//		e.addElements();
+		//e.arrayList();
+		//e.Iteration();
+		//e.sortArrayList();
+		//e.insertElement();
+		//e.addElements();
 		e.sortAlphabet();
 		e.replace();
+		e.search();
+		//e.remove();
+		e.removeDuplicate();
 
 	}
 }
